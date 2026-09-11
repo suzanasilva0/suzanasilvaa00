@@ -1,15 +1,13 @@
-body {
-    /* ===== RESET BÁSICO ===== */
-/* Isso tira uns espaçamentos chatos que vem de fábrica */
+/* ===== RESET BÁSICO ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== CORPO DO SITE ===== */
+/* ===== FUNDO PRETO E LETRAS ===== */
 body {
-    background: linear-gradient(135deg, #1a0033, #0d0d0d);
+    background-color: #000000;
     font-family: 'Arial', sans-serif;
     color: #ffffff;
     padding: 30px 20px;
@@ -19,44 +17,63 @@ body {
 /* ===== TÍTULO PRINCIPAL ===== */
 h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #ff2ecc;
-    text-shadow: 0 0 10px #ff2ecc, 0 0 20px #ff2ecc;
+    text-shadow: 0 0 15px #ff2ecc, 0 0 30px #a020f0;
     margin-bottom: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ===== TÍTULOS DAS SEÇÕES (𝓯𝓾𝓷𝓴 e 𝓇/𝒷) ===== */
+.titulo-secao {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #a020f0, 0 0 20px #ff2ecc;
+    margin: 40px 0 25px 0;
+    letter-spacing: 4px;
+}
+
+/* ===== LINHA DE VÍDEOS (DEITADOS, LADO A LADO) ===== */
+.linha-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 /* ===== VÍDEOS (IFRAMES) ===== */
 iframe {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    margin: 25px auto;
-    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+    border-radius: 12px;
     border: 3px solid #a020f0;
-    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.7);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* ===== EFEITO QUANDO PASSA O MOUSE ===== */
 iframe:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px rgba(255, 46, 204, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 46, 204, 0.9);
 }
 
 /* ===== CELULAR ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    .titulo-secao {
         font-size: 2rem;
     }
     iframe {
-        height: 220px;
-        margin: 15px auto;
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
     }
     body {
         padding: 15px 10px;
     }
-}
 }
