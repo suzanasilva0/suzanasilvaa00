@@ -1,8 +1,61 @@
 body {
-    background-color: rgb(255, 175, 175);
+    /* ===== RESET BÁSICO ===== */
+/* Isso tira uns espaçamentos chatos que vem de fábrica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ===== CORPO DO SITE ===== */
+body {
+    background: linear-gradient(135deg, #1a0033, #0d0d0d);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
 h1 {
-    color: #df7e7e;
-    font-size: 75px;
+    text-align: center;
+    font-size: 3rem;
+    color: #ff2ecc;
+    text-shadow: 0 0 10px #ff2ecc, 0 0 20px #ff2ecc;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== VÍDEOS (IFRAMES) ===== */
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 25px auto;
+    border-radius: 15px;
+    border: 3px solid #a020f0;
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* ===== EFEITO QUANDO PASSA O MOUSE ===== */
+iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 46, 204, 0.8);
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    iframe {
+        height: 220px;
+        margin: 15px auto;
+    }
+    body {
+        padding: 15px 10px;
+    }
 }
